@@ -7,3 +7,7 @@
 body{
     background-color: #1a202c;
 }
+#taskList::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}

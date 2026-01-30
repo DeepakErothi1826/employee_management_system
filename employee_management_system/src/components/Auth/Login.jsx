@@ -7,19 +7,22 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(" Email: ", email);
-    console.log(" Password: ", password);
+    console.log(" Email is: ", email);
+    console.log(" Password is: ", password);
+
+    setEmail("");
+    setPassword("");  
   }
     
   return (
-    <div className='flex items-center justify-center h-screen'>
-      <div className='border-2 border-red-600 border-opacity-50 rounded-lg shadow-lg py-18 px-3'>
+    <div className='flex items-center justify-center h-screen p-18 px-6 bg-gray-900'>
+      <div className='border-2 border-red-600 border-opacity-50 rounded-lg shadow-lg  p-12 px-6'>
         <form 
         onSubmit={(e)=>{
           submitHandler(e)
         }}
-        className='flex flex-col items-center justify-center p-7 gap-5'>
-          <h1 className='text-2xl font-bold text-2xl font-bold mt-[-10px]'>Login Page</h1>
+        className='flex flex-col items-center justify-center p-2 gap-5'>
+          <h1 className='text-2xl font-bold text-2xl font-bold mt-[-10px] p-4'>Login Page</h1>
           <input
           value={email}
            onChange={(e)=>{
