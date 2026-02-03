@@ -11,11 +11,9 @@ const App = () => {
   const handelLogin = (email, password) => {
     if (email == "admin@123.com" && password == "admin123") {
       setUser("admin");
-      console.log("Admin Login Success");
     }
     else if (email == "employee@123.com" && password == "employee123") {
       setUser("employee");
-      console.log("Employee Login Success");
     }
     else {
       alert("Invalid Credentials")
@@ -30,8 +28,9 @@ const App = () => {
 
   return (
     <>
-      {!user ? <Login handelLogin={handelLogin} /> : ""}
-      {user == "admin" ? <AdminDashboard /> : <EmployeeDashboard />}
+      {!user ? <Login handelLogin={handelLogin} /> : ''}
+      {user == "admin" ? <AdminDashboard /> : ''}
+      {user == "employee" ? <EmployeeDashboard /> : ''}
 
     </>
   )
