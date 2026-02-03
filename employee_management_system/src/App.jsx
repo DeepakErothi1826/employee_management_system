@@ -1,14 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
+import { getLocalStorage, setLocalStorage } from './Utils/localstorage'
 
 const App = () => {
+
+  const [user, setUser] = useState(null);
+
+  const handelLogin = (email, password) => {
+    if (email == "admin@123.com" && password == "admin123") {
+      setUser("admin");
+      console.log("Admin Login Success");
+    }
+    else if (email == "employee@123.com" && password == "employee123") {
+      setUser("employee");
+      console.log("Employee Login Success");
+    }
+    else {
+      alert("Invalid Credentials")
+    }
+
+
+  }
+  // useEffect(() => {
+  //   // setLocalStorage();
+  //    getLocalStorage();
+  // },);
+
   return (
     <>
-    <Login />
-    {/* <EmployeeDashboard /> */}
-    {/* <AdminDashboard /> */}
+      {!user ? <Login handelLogin={handelLogin} /> : ""}
+      {user == "admin" ? <AdminDashboard /> : <EmployeeDashboard />}
 
     </>
   )

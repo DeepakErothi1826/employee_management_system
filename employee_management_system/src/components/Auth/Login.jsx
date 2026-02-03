@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = ({handelLogin}) => {
+  
+  
   
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(" Email is: ", email);
-    console.log(" Password is: ", password);
-
+    handelLogin(email, password); 
     setEmail("");
     setPassword("");  
-  }
+  } 
     
   return (
     <div className='flex items-center justify-center h-screen p-18 px-6 bg-gray-900'>
