@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreateTask = () => {
+const CreateTask = ( ) => {
   return (
     <div>
        <div className="max-w-4xl mx-auto mt-10">

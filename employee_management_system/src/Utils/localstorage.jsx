@@ -1,7 +1,9 @@
 const employee = [
   {
+    firstName: "Aarav",
     email: "user1@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 3, newTask: 1, completed: 2, failed: 0 },
     tasks: [
       {
         active: true,
@@ -36,8 +38,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Vivaan",
     email: "user2@example.com",
     password: "1234",
+    taskCount: { total: 4, active: 2, newTask: 1, completed: 2, failed: 0 },
     tasks: [
       {
         active: true,
@@ -82,8 +86,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Aditya",
     email: "user3@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 2, completed: 1, failed: 0 },
     tasks: [
       {
         active: true,
@@ -118,8 +124,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Ishaan",
     email: "user4@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 2, newTask: 2, completed: 1, failed: 0 },
     tasks: [
       {
         active: true,
@@ -154,8 +162,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Krishna",
     email: "user5@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 1, completed: 3, failed: 0 },
     tasks: [
       {
         active: true,
@@ -190,8 +200,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Rohan",
     email: "user6@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -226,8 +238,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Arjun",
     email: "user7@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 1, completed: 1, failed: 0 },
     tasks: [
       {
         active: true,
@@ -262,8 +276,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Kunal",
     email: "user8@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -298,8 +314,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Neha",
     email: "user9@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -334,8 +352,10 @@ const employee = [
     ]
   },
   {
+    firstName: "Priya",
     email: "user10@example.com",
     password: "1234",
+    taskCount: { total: 3, active: 1, newTask: 1, completed: 1, failed: 1 },
     tasks: [
       {
         active: true,
@@ -373,6 +393,7 @@ const employee = [
 
 const admin = [
   {
+    firstName: "Sanjay",
     email: "admin@example.com",
     password: "1234"
   }
@@ -387,8 +408,7 @@ export const setLocalStorage = () => {
 export const getLocalStorage = () => {
     const employeeData = JSON.parse(localStorage.getItem("employee"));
     const adminData = JSON.parse(localStorage.getItem("admin"));
-    // return { employeeData, adminData };
-    console.log("Employee Data:", employeeData);
-    console.log("Admin Data:", adminData);
+    return { employeeData, adminData };
+   
     
 }
